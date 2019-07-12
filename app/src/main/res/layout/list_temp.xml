@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:divider="@null"
+    android:showDividers="none"
+    android:weightSum="5">
+
+    <TextView
+        android:id="@+id/notno"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="No."
+        android:textSize="30sp"
+        android:textColor="@color/colorAccent"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/titleitem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:layout_weight="2"/>
+
+    <TextView
+        android:id="@+id/datetime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Date"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:layout_weight="2"/>
+
+
+</LinearLayout>

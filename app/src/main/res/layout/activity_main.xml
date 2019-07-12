@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:weightSum="3">
+
+        <ImageView
+            android:id="@+id/newImg"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="17dp"
+            app:srcCompat="@drawable/ic_action_new"
+            tools:ignore="VectorDrawableCompat"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/saveImg"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="16dp"
+            app:srcCompat="@drawable/ic_action_save"
+            tools:ignore="VectorDrawableCompat"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/allImg"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="133dp"
+            android:layout_marginRight="133dp"
+            android:layout_marginBottom="654dp"
+            app:srcCompat="@drawable/ic_action_all_list"
+            tools:ignore="VectorDrawableCompat"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/titleBox"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="70dp"
+        android:ems="10"
+        android:hint="Title"
+        android:inputType="textPersonName"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/noteBox"
+        android:layout_width="410dp"
+        android:layout_height="265dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="141dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Note Here!"
+        android:inputType="textMultiLine" />
+
+
+</RelativeLayout>
