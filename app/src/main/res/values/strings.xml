@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">NotePad</string>
+    <string-array name="items">
+        <item>Black</item>
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Green</item>
+    </string-array>
 </resources>

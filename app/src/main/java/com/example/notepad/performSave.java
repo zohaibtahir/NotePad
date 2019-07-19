@@ -7,6 +7,7 @@ import java.util.Date;
 
 public class performSave {
    public static ArrayList<utility> myList = new ArrayList<>();
+   public static int color;
 
    public static String getCurrentDate(){
        Date c = Calendar.getInstance().getTime();

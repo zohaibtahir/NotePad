@@ -1,11 +1,15 @@
 package com.example.notepad;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -30,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     EditText titleBox, noteBox;
     String title = "";
     String note = "";
+    int colorsArray[]={Color.BLACK,Color.RED,Color.BLUE,Color.GREEN};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,6 +91,37 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+//to infelate menu to main activity
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        //return super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.primary,menu);
+        return true;
+    }
+//when click on menu item then what to do
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        //return super.onOptionsItemSelected(item);
+        switch (item.getItemId()){
+            case R.id.setting:
+                startActivity(new Intent(getApplicationContext(),SettingsActivity.class));
+                break;
+            case R.id.help:
+                Toast.makeText(getApplicationContext(), "Help", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.drive:
+                Toast.makeText(getApplicationContext(), "Coming Soon!", Toast.LENGTH_SHORT).show();
+                break;
+        }
+        return true;
+    }
+
+    //Set color on resume from settings activity
+    @Override
+    protected void onResume() {
+        super.onResume();
+        titleBox.setTextColor(colorsArray[performSave.color]);
     }
 
     public void save_method() {
